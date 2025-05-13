@@ -10,26 +10,60 @@
 
   <style>
     body {
-      background-color: #f8f9fa;
+      background-image: url('https://www.transparenttextures.com/patterns/roses.png'); /* Light floral texture */
+      background-color: #ffe6ec; /* Soft rose pink base */
+      background-repeat: repeat;
       font-family: 'Segoe UI', sans-serif;
+      color: #333;
     }
+
     h1, h2 {
-      color: #0d6efd;
+      color: #c2185b;
     }
+
+    h3 {
+      color: #ad1457;
+    }
+
+    .subtitle {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #d81b60;
+    }
+
     .islamic-quote {
       font-style: italic;
-      color: #198754;
+      color: #388e3c;
     }
+
     .countdown {
       font-size: 1.5rem;
-      color: #dc3545;
+      color: #d81b60;
       font-weight: bold;
     }
+
     footer {
       margin-top: 4rem;
       padding: 1rem;
-      background-color: #e9ecef;
+      background-color: #f8bbd0;
       text-align: center;
+      color: #6a1b9a;
+    }
+
+    .btn-success {
+      background-color: #4caf50;
+      border-color: #4caf50;
+    }
+
+    .btn-primary {
+      background-color: #ab47bc;
+      border-color: #ab47bc;
+    }
+
+    blockquote {
+      border-left: 4px solid #d81b60;
+      padding-left: 1rem;
+      color: #6a1b9a;
     }
   </style>
 </head>
@@ -37,9 +71,10 @@
 
   <div class="container text-center py-5">
     <h1 class="display-4">Wedding Invitation</h1>
+    <p class="subtitle">Basha weds Basheera</p>
     <p class="islamic-quote">"And We created you in pairs." – Quran 78:8</p>
 
-    <h2 class="mt-5">Shaik Gouse Basha & Shaik Basheera</h2>
+    <h2 class="mt-4">Shaik Gouse Basha & Shaik Basheera</h2>
     <p class="lead">Together with their families, joyfully invite you to their Nikah and Reception</p>
 
     <!-- Countdown -->
@@ -48,15 +83,15 @@
     <!-- Nikah Details -->
     <div class="my-5">
       <h3>Nikah Ceremony</h3>
-      <p><strong>Date:</strong> Friday, 20th June 2025</p>
-      <p><strong>Venue:</strong><br>బిలాల్ ఉర్దూ ఘర్ షాదిఖానా ఫంక్షన్ హాల్<br>బిలాల్ ఉర్దూ ఘర్ కమ్ షాదికాన</p>
+      <p><strong>Date:</strong> Sunday, 8th June 2025</p>
+      <p><strong>Venue:</strong>Bilal Shadi Khana Nehru Nagar, Rajahmundry</p>
       <a href="https://maps.app.goo.gl/RCfQWhs69SQgxJha9?g_st=aw" target="_blank" class="btn btn-success">View Nikah Venue</a>
     </div>
 
     <!-- Reception Details -->
     <div class="my-5">
       <h3>Reception</h3>
-      <p><strong>Date:</strong> Saturday, 21st June 2025</p>
+      <p><strong>Date:</strong> Tuesday, 10th June 2025</p>
       <p><strong>Venue:</strong><br>Lion's Club Function Hall, Mandapeta</p>
       <a href="https://maps.app.goo.gl/nwwzxgHhwUUQ5V7DA?g_st=aw" target="_blank" class="btn btn-primary">View Reception Venue</a>
     </div>
@@ -67,7 +102,7 @@
   </div>
 
   <footer>
-    <small>© 2025 Shaik Gouse Basha & Shaik Basheera | Designed with Dua 💖</small>
+    <small>© 2025 Shaik Gouse Basha & Shaik Basheera | Designed with Love 💖</small>
   </footer>
 
   <!-- Bootstrap JS -->
@@ -76,7 +111,7 @@
   <!-- Countdown Script -->
   <script>
     const countdownElement = document.getElementById("countdown-timer");
-    const weddingDate = new Date("2025-06-20T11:00:00").getTime();
+    const weddingDate = new Date("2025-06-08T11:00:00").getTime(); // Updated to 8th June 2025
 
     function updateCountdown() {
       const now = new Date().getTime();
