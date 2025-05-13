@@ -23,7 +23,7 @@
     }
 
     .overlay {
-      background-color: rgba(255, 255, 255, 0.88);
+      background-color: rgba(255, 182, 193, 0.88); /* Light pink background */
       padding: 2rem;
       border-radius: 15px;
     }
@@ -50,16 +50,30 @@
     }
 
     .countdown {
-      font-size: 1.25rem;
+      font-size: 1.5rem;
       color: #d81b60;
       font-weight: bold;
       margin-top: 1rem;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .countdown-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .countdown span {
+      padding: 0 8px;
     }
 
     .countdown-labels {
       font-size: 1rem;
       color: #333;
       margin-top: 0.5rem;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
     }
 
     footer {
@@ -101,9 +115,11 @@
     <div class="my-5">
       <h3>Nikah Ceremony</h3>
       <p><strong>Date:</strong> Sunday, 8th June 2025</p>
-      <p><strong>Venue:</strong><br> Bilal Shadikhana Function Hall, Rajahmundry <br></p>
+      <p><strong>Venue:</strong><br>Bilal Shadi Khana Nehru Nagar, Rajahmundry</p>
       <a href="https://maps.app.goo.gl/RCfQWhs69SQgxJha9?g_st=aw" target="_blank" class="btn btn-success">View Nikah Venue</a>
-      <div class="countdown" id="nikah-countdown"></div>
+      <div class="countdown-wrapper">
+        <div class="countdown" id="nikah-countdown"></div>
+      </div>
       <div class="countdown-labels">
         <span>Days</span> | <span>Hours</span> | <span>Minutes</span> | <span>Seconds</span>
       </div>
@@ -115,7 +131,9 @@
       <p><strong>Date:</strong> Tuesday, 10th June 2025</p>
       <p><strong>Venue:</strong><br>Lion's Club Function Hall, Mandapeta</p>
       <a href="https://maps.app.goo.gl/nwwzxgHhwUUQ5V7DA?g_st=aw" target="_blank" class="btn btn-primary">View Reception Venue</a>
-      <div class="countdown" id="reception-countdown"></div>
+      <div class="countdown-wrapper">
+        <div class="countdown" id="reception-countdown"></div>
+      </div>
       <div class="countdown-labels">
         <span>Days</span> | <span>Hours</span> | <span>Minutes</span> | <span>Seconds</span>
       </div>
@@ -154,7 +172,7 @@
         const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((diff % (1000 * 60)) / 1000);
 
-        el.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+        el.textContent = `${days}:${hours}:${minutes}:${seconds}`;
       }
 
       const timer = setInterval(update, 1000);
@@ -167,7 +185,7 @@
   </script>
 
   <!-- Background Music -->
-  <audio autoplay loop controls style="position: fixed; bottom: 1rem; left: 1rem; z-index: 999;">
+  <audio autoplay loop style="position: fixed; bottom: 1rem; left: 1rem; z-index: 999;">
     <source src="https://cdn.pixabay.com/download/audio/2023/03/21/audio_9c7ff77567.mp3?filename=beautiful-piano-145039.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
