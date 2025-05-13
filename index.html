@@ -3,133 +3,100 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ahmed & Ayesha's Wedding Invitation</title>
+  <title>Shaik Gouse Basha & Shaik Basheera's Wedding</title>
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <style>
     body {
-      background-color: #f9f9f9;
+      background-color: #f8f9fa;
       font-family: 'Segoe UI', sans-serif;
-      color: #333;
     }
-
-    h1, h2, h4 {
+    h1, h2 {
       color: #0d6efd;
     }
-
     .islamic-quote {
       font-style: italic;
       color: #198754;
     }
-
-    blockquote {
-      font-style: italic;
-      color: #6c757d;
-    }
-
     .countdown {
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 8px;
-      border: 1px solid #dee2e6;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      font-size: 1.5rem;
+      color: #dc3545;
+      font-weight: bold;
     }
-
     footer {
-      border-top: 1px solid #ccc;
+      margin-top: 4rem;
+      padding: 1rem;
+      background-color: #e9ecef;
+      text-align: center;
     }
   </style>
 </head>
 <body>
 
-  <div class="container py-5 text-center">
+  <div class="container text-center py-5">
     <h1 class="display-4">Wedding Invitation</h1>
-    <p class="lead islamic-quote" id="quote">"And We created you in pairs." (Quran 78:8)</p>
+    <p class="islamic-quote">"And We created you in pairs." – Quran 78:8</p>
 
-    <div class="bride-groom my-5">
-      <h2>Ahmed & Ayesha</h2>
-      <p>With the blessings of Allah (SWT) and our families, we joyfully invite you to our Nikah and Reception.</p>
-    </div>
+    <h2 class="mt-5">Shaik Gouse Basha & Shaik Basheera</h2>
+    <p class="lead">Together with their families, joyfully invite you to their Nikah and Reception</p>
 
     <!-- Countdown -->
-    <div class="countdown my-5">
-      <h4 class="mb-3">Countdown to Nikah</h4>
-      <div id="countdown-timer" class="display-6 text-primary"></div>
+    <div class="countdown my-4" id="countdown-timer"></div>
+
+    <!-- Nikah Details -->
+    <div class="my-5">
+      <h3>Nikah Ceremony</h3>
+      <p><strong>Date:</strong> Friday, 20th June 2025</p>
+      <p><strong>Venue:</strong><br>బిలాల్ ఉర్దూ ఘర్ షాదిఖానా ఫంక్షన్ హాల్<br>బిలాల్ ఉర్దూ ఘర్ కమ్ షాదికాన</p>
+      <a href="https://maps.app.goo.gl/RCfQWhs69SQgxJha9?g_st=aw" target="_blank" class="btn btn-success">View Nikah Venue</a>
     </div>
 
-    <!-- Event Details -->
-    <div class="event-section row my-5">
-      <div class="col-md-6 mb-4">
-        <h4>Nikah Ceremony</h4>
-        <p><strong>Date:</strong> Friday, 20th June 2025</p>
-        <p><strong>Time:</strong> 11:00 AM</p>
-        <p><strong>Venue:</strong> Masjid Al-Noor, Hyderabad</p>
-        <a href="https://maps.google.com/?q=Masjid+Al-Noor,+Hyderabad" class="btn btn-outline-success" target="_blank">View on Google Maps</a>
-      </div>
-
-      <div class="col-md-6 mb-4">
-        <h4>Reception</h4>
-        <p><strong>Date:</strong> Saturday, 21st June 2025</p>
-        <p><strong>Time:</strong> 7:00 PM</p>
-        <p><strong>Venue:</strong> Royal Palace Banquet Hall, Hyderabad</p>
-        <a href="https://maps.google.com/?q=Royal+Palace+Banquet+Hall,+Hyderabad" class="btn btn-outline-primary" target="_blank">View on Google Maps</a>
-      </div>
+    <!-- Reception Details -->
+    <div class="my-5">
+      <h3>Reception</h3>
+      <p><strong>Date:</strong> Saturday, 21st June 2025</p>
+      <p><strong>Venue:</strong><br>Lion's Club Function Hall, Mandapeta</p>
+      <a href="https://maps.app.goo.gl/nwwzxgHhwUUQ5V7DA?g_st=aw" target="_blank" class="btn btn-primary">View Reception Venue</a>
     </div>
 
-    <!-- Quote -->
     <blockquote class="blockquote mt-5">
-      <p class="mb-0">"May Allah bless your marriage and unite both of you in goodness." (Hadith)</p>
+      <p class="mb-0">"May Allah bless your marriage and unite both of you in goodness." – Hadith</p>
     </blockquote>
-
-    <!-- Ending Note -->
-    <div class="mt-5">
-      <h5>We look forward to celebrating with you!</h5>
-      <p>With Love,<br/>Ahmed & Ayesha</p>
-    </div>
   </div>
 
-  <footer class="text-center py-3 bg-light">
-    <small>&copy; 2025 Ahmed & Ayesha. Designed with ♥ and Dua.</small>
+  <footer>
+    <small>© 2025 Shaik Gouse Basha & Shaik Basheera | Designed with Dua 💖</small>
   </footer>
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
+  <!-- Countdown Script -->
   <script>
-    // Islamic quotes rotation
-    const quotes = [
-      '"And We created you in pairs." (Quran 78:8)',
-      '"May Allah bless you both and unite you in goodness." (Hadith)',
-      '"Marriage is a part of my sunnah." (Prophet Muhammad ﷺ)',
-      '"They are clothing for you and you are clothing for them." (Quran 2:187)'
-    ];
-    document.getElementById('quote').textContent = quotes[Math.floor(Math.random() * quotes.length)];
-
-    // Countdown Timer
+    const countdownElement = document.getElementById("countdown-timer");
     const weddingDate = new Date("2025-06-20T11:00:00").getTime();
 
     function updateCountdown() {
       const now = new Date().getTime();
-      const distance = weddingDate - now;
+      const diff = weddingDate - now;
 
-      if (distance < 0) {
-        document.getElementById("countdown-timer").innerHTML = "The Nikah has taken place!";
-        clearInterval(timerInterval);
+      if (diff <= 0) {
+        countdownElement.textContent = "The Nikah has taken place!";
+        clearInterval(interval);
         return;
       }
 
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
 
-      document.getElementById("countdown-timer").innerHTML =
-        `${days}d ${hours}h ${minutes}m ${seconds}s`;
+      countdownElement.textContent = `Countdown to Nikah: ${days}d ${hours}h ${minutes}m ${seconds}s`;
     }
 
-    const timerInterval = setInterval(updateCountdown, 1000);
+    const interval = setInterval(updateCountdown, 1000);
     updateCountdown();
   </script>
 </body>
